@@ -35,19 +35,19 @@ export default function sideNav(){
 
         <div className="flex flex-col gap-2 pb-12">
             <div className="flex flex-row items-center gap-2 p-2 text-black active:text-white hover:bg-gray-400 cursor-pointer font-semibold  active:bg-primary rounded-lg " onClick={() => navigate("/dashboard")}>
-            <Home/> Overview 
+            <Home className="text-blue-800"/> Overview 
             </div>
 
             <div className="flex flex-row items-center gap-2 p-2 text-black hover:bg-gray-400 cursor-pointer font-semibold  active:bg-primary rounded-lg active:text-white " onClick={() => navigate("/dashboard")}>
-            <FileText/> My Designs
+            <FileText className="text-blue-800"/> My Designs
             </div>
 
             <div className="flex flex-row items-center gap-2 p-2 text-black hover:bg-gray-400 cursor-pointer font-semibold  active:bg-primary active:text-white rounded-lg " onClick={() => navigate("/dashboard")}>
-            <FileText/> Orders
+            <FileText className="text-blue-800"/> Orders
             </div>
 
             <div className="flex flex-row items-center gap-2 p-2 text-black hover:bg-gray-400 cursor-pointer font-semibold  active:bg-primary active:text-white rounded-lg " onClick={() => navigate("/dashboard")}>
-            <DollarSign /> Earnings
+            <DollarSign className="text-blue-800"/> Earnings
             </div>
 
 
@@ -56,20 +56,20 @@ export default function sideNav(){
 
         <div className="flex flex-col gap-2 pb-12">
              <div className="flex flex-row items-center gap-2 p-2 text-black active:text-white hover:bg-gray-400 cursor-pointer font-semibold  active:bg-primary rounded-lg " onClick={() => navigate("/dashboard")}>
-            <Settings/> Settings 
+            <Settings className="text-blue-800"/> Settings 
             </div>
 
              <div className="flex flex-row items-center gap-2 p-2 text-black  active:text-white hover:bg-gray-400 cursor-pointer font-semibold  active:bg-primary rounded-lg " onClick={handleLogout}>
-            <LogOut/> Log Out
+            <LogOut className="text-blue-800"/> Log Out
             </div>
         </div>
         
-         <hr className="border-gray-400  bottom-2 left-1" />
+         <hr className="border-gray-400  bottom-2  left-1" />
         <div className="  flex items-center gap-2 text-black  bg-white p-2 rounded-xl border border-white/10 fixed bottom-2 left-1   ">
 
         
 
-            <User className="w-8 h-10" />
+             <User className="w-10 h-10 text-blue-800 rounded-full bg-gray-200 p-1" />
                         <span className="text-md font-semibold max-w-[100px] truncate">{user?.name || "Seller"} <br/> <p className="text-xs text-blue-800/70">Designer</p></span>
 
                        
