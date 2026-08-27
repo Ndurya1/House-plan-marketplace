@@ -14,6 +14,7 @@ import {
   User,
   ArrowLeft,
   ArrowRight,
+  Home,
 } from 'lucide-react';
 import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -31,6 +32,7 @@ import {
   getMediaUrl,
 } from '@/api';
 import SideNav from '@/components/sideNav';
+import MobileNav from '@/components/MobileNav';
 
 export default function SellerDashboard() {
   const navigate = useNavigate();
@@ -259,7 +261,14 @@ export default function SellerDashboard() {
 
       <main className="flex-1 pt-6 pb-16 px-8    md:ml-12">
         {/* Back Link */}
-        <div className="mb-6 mx-auto w-full max-w-4xl">
+
+        <div className=" flex md:hidden
+         gap-2 cursor-pointer p-2 pb-6 top-0" onClick={() => navigate("/")}>
+          <Home className="text-primary w-8 h-8 text--blue-800" />
+          <span className="text-xl font-bold  tracking-tight">PlanSoko</span>
+        </div>
+
+        <div className=" hidden md:flex mb-6 mx-auto w-full max-w-4xl">
           <button
             onClick={() => navigate('/')}
             className="flex items-center gap-1.5 text-slate-500 hover:text-slate-800 text-sm font-semibold transition-colors"
@@ -723,6 +732,7 @@ export default function SellerDashboard() {
           </div>
         </div>
       )}
+      <MobileNav/>
     </div>
   );
 }
