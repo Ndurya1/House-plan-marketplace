@@ -7,6 +7,7 @@ import SellerDashboard from './pages/SellerDashboard';
 import AboutPage from './pages/AboutPage';
 import SideNav from './components/sideNav';
 import MobileNav from './components/MobileNav';
+import ErrorPage from './components/ErrorPage';
 export default function App() {
   return (
     <Router>
@@ -17,7 +18,7 @@ export default function App() {
           <Route path="/plans/:category" element={<BrowsePage />} />
           <Route path="/signUp" element={<Register />} />
           <Route path="/dashboard" element={<SellerDashboard />} />
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route path="*" element={<ErrorPage/>} />
           <Route path="sidebar" element={<SideNav/> }/>
           <Route path="mobile-nav" element={<MobileNav/> }/>
         </Routes>
